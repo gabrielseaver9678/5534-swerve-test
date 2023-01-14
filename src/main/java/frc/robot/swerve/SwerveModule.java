@@ -40,6 +40,7 @@ public class SwerveModule {
     public void setDesiredState (SwerveModuleState state) {
         
         // Log data to smart dashboard
+        SmartDashboard.putNumber(moduleName + " current angle", steerEncoder.getAngle());
         SmartDashboard.putNumber(moduleName + " desired drive speed", state.speedMetersPerSecond);
         SmartDashboard.putNumber(moduleName + " desired angle (degrees)", state.angle.getDegrees());
         
